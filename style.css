@@ -1,0 +1,65 @@
+html, body { /*전체 화면을 높이로 잡아야 퍼센트가 생각한대로 적용*/
+    height: 100%;
+    color: white;
+}
+
+body, ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none; /*밑줄 제거*/
+}
+
+.menu-bar__menu-box-1 > ul > li {
+    display: inline-block;
+}
+
+.menu-bar__menu-box-1 > ul {
+    text-align: right;
+}
+
+.menu-bar__menu-box-1 > ul > li > a {
+    color: white;
+    display: block;
+    padding: 10px 30px;
+}
+
+.menu-bar__menu-box-1 > ul > li:hover > a {
+    color: cadetblue; 
+    text-decoration: none;
+}
+
+a:link { 
+    color: white; 
+    text-decoration: none;
+}
+a:visited{ 
+    color: cadetblue; 
+    text-decoration: none;
+}
+a:hover { 
+    color:cadetblue; 
+    text-decoration: none;
+}
+
+.cadetblue{
+    color: darkcyan;
+}
+
+.center{
+    text-align: center;
+}
+
+.word_space{
+    word-spacing: 100px;
+}
+
+.img_control{
+    display: inline;
+}
+
+
+
