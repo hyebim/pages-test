@@ -10,59 +10,204 @@
 </head>
 
 <header>
-  <!--햄버거 버튼 구현하고 싶음-->
 
   <!--con-min-width: 사이트의 최소 너비 결정 / con: 가운데 정렬 및 실질적으로 사영할 너비 결정-->
-  <h3 class="menu-bar">
-      <nav class="menu-bar__menu-box-1">
+  <div class="menu-bar">
+    <div class="menu-left">
+      <a href="#" onclick="location.reload(); return false;">hyebin</a>
+    </div>
+    <nav class="menu-right">
         <ul>
-          <li><a href="#" class="block">소개</a></li>
-          <li><a href="#" class="block">포트폴리오</a></li>
-          <li><a href="#" class="block">포스팅</a></li>
+          <li>
+            <a href="http://github.com/hyebim" target="_blank">
+            <img src="images/githubLogo.webp" width="30px" height="30px" style="vertical-align: middle;">
+              Github
+            </a>
+          </li>
+          <li><a href="#" class="block">Posting</a></li>
         </ul>
-      </nav>
-  </h3>
+    </nav>
+  </div>
+
 </header>
 
 <body style="background-color: black;">
 
+
     <br><br><br><br>
-    <h1 class="center"; style="color: white;" >안녕하세요, 개발자 <span style="color: cadetblue">사혜빈</span>입니다.</h1>
+    <h1 class="center"; style="color: white;" >안녕하세요, 개발자 <span style="color: #3abed8">사혜빈</span>입니다.</h1>
     <br><br>
     <center>
-    <img src="https://placehold.co/200x200" alt=""/>
+      <div class="circle-img">
+          <img class="circle-img-img" src="images/kkuma.jpeg" alt=""/>
+      </div>
     </center>
     <br>
-    <div style="color: white;">2001. 04. 24</div>
-    <div style="color: white;">shb010424@gmail.com</div>
-    <hr />
 
-    <center>
-    <div style="color: white;">Skills</div>
-    <br>
-
-    <div class="img_control";>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8i4zPog-0j0JR_yZglxPhTPZXxN2iMTQ3Dw&s" alt="" width="100"/>
-    <img src="https://logospng.org/download/java/logo-java-512.png" alt="" width="140"/>
-    <img src="https://play-lh.googleusercontent.com/a474x4JE09wU91UJZT-a9tj2GZwz0SQnk6kXcf1OohrarSB2prgCOMHPHwNg2Y6MPw" alt="" width="100"/>
-    <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/158403726/original/1e2ed80deac5a4d280fbcdfff46bfab4052c434b/do-a-raw-cpp-or-c-program.jpg" alt="" width="150"/>
-    <img src="https://enggkatta.com/wp-content/uploads/2024/06/introduction-to-github.jpg" alt="" height="120"/>
-    <div class="word_space">springboot java kotlin c github</div>
-    </div>
-    </center>
-    <hr />
-
-    <div style="color: white;">Projects</div>
-    <br>
-    <center>
-    <a href="https://www.notion.so/Web-TAZO-203fbffa7e06801382ccc0e293fbf264?source=copy_link">
-    <img src="images/project1.png" alt=""  width="200" height="200">
-    </a>
-    <p>차량 공유 서비스 TAZO</p>
-    </center>
+    <h2 class="center"; style="color: white;" >About Me</h2>
+    <div class="center";>안녕하세요. 컴퓨터학과를 전공하고 끊임없이 학습하고자하는 개발자 사혜빈입니다.<br>  
+	  <!-- ... 에 관심이 많으며, 사용자 경험을 개선하는 데에 집중하고 있습니다.<br>   -->
+    문제를 해결하는 과정에서 배우는 것을 즐기고, 팀워크를 중요하게 생각합니다.
+  </div>
+  <br>
     
-    <hr />
-    <div style="color: white;">Link</div>
-    <a href="http://github.com/hyebim" target="_blank">https://github.com/hyebim</a>
+  <br>
+    <h2 class="section-title">Projects</h2>
+
+  <div class="project-container">
+
+    <!-- 프로젝트1 -->
+    <div class="project-card" onclick="openModal('modal-tazo')">
+        <img src="images/project1.png" alt="TAZO Project">
+          <div class="project-info">
+            <div class="title-with-period">
+              <h3>차량 공유 서비스 TAZO</h3>
+              <div class="period-box">2023.05~2023.08</div>
+            </div>
+          </div>
+          <p>목적지가 동일한 탑승자들끼리 게시판의 글과 댓글을 통해 동승자를 구하여 비용 부담을 줄일 수 있습니다. </p>
+          <div class="lang-container">
+            <div class="lang-box">java</div>
+            <div class="lang-box">javascript</div>
+            <div class="lang-box">html</div>
+            <div class="lang-box">css</div>
+          </div>
+
+          <div class="view-more">
+            <br>
+            <a href="https://www.notion.so/Web-TAZO-203fbffa7e06801382ccc0e293fbf264?source=copy_link" target="_blank">노션 링크로 연결됩니다.</a>
+          </div>
     </div>
+
+    <div id="modal-tazo" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-tazo')">&times;</span>
+        <h2>TAZO - 차량 공유 서비스</h2>
+        <p>간단한 소개, 요약 또는 스크린샷을 여기에 넣을 수 있어요.</p>
+      </div>
+    </div>
+
+    <!-- 프로젝트2 -->
+    <div class="project-card" onclick="openModal('modal-')">
+        <img src="https://placehold.co/200x200" alt="TAZO Project">
+          <div class="project-info">
+            <div class="title-with-period">
+              <h3>프로젝트 제목 입력</h3>
+              <div class="period-box">개발 기간 입력</div>
+            </div>
+          </div>
+          <p>프로젝트 한 줄 소개 입력</p>
+          <div class="lang-container">
+            <div class="lang-box">java</div>
+            <div class="lang-box">javascript</div>
+            <div class="lang-box">html</div>
+            <div class="lang-box">css</div>
+          </div>
+
+          <div class="view-more">
+            <br>
+            <a href="https://www.notion.so/Web-TAZO-203fbffa7e06801382ccc0e293fbf264?source=copy_link" target="_blank">노션 링크로 연결됩니다.</a>
+          </div>
+    </div>
+
+    <div id="modal-" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-')">&times;</span>
+        <h2>TAZO - 차량 공유 서비스</h2>
+        <p>간단한 소개, 요약 또는 스크린샷을 여기에 넣을 수 있어요.</p>
+      </div>
+    </div>
+
+  <!-- 프로젝트3 -->
+   <div class="project-card" onclick="openModal('modal-tazo')">
+        <img src="https://placehold.co/200x200" alt="TAZO Project">
+          <div class="project-info">
+            <div class="title-with-period">
+              <h3>프로젝트 제목 입력</h3>
+              <div class="period-box">개발 기간 입력</div>
+            </div>
+          </div>
+          <p>프로젝트 한 줄 소개 입력</p>
+          <div class="lang-container">
+            <div class="lang-box">java</div>
+            <div class="lang-box">javascript</div>
+            <div class="lang-box">html</div>
+            <div class="lang-box">css</div>
+          </div>
+
+          <div class="view-more">
+            <br>
+            <a href="https://www.notion.so/Web-TAZO-203fbffa7e06801382ccc0e293fbf264?source=copy_link" target="_blank">노션 링크로 연결됩니다.</a>
+          </div>
+    </div>
+
+    <div id="modal-" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-')">&times;</span>
+        <h2>TAZO - 차량 공유 서비스</h2>
+        <p>간단한 소개, 요약 또는 스크린샷을 여기에 넣을 수 있어요.</p>
+      </div>
+    </div>
+
+
+
+</div>
+
+
+  <br><br>
+  <center>
+  <h2 class="skills-title">Skills</h2>
+
+  <div class="img-control">
+    <div class="img-item">
+      <img src="images/springLogo.png" alt="Spring Logo" />
+      <div class="img-label">Spring Boot</div>
+    </div>
+
+    <div class="img-item">
+      <img src="https://logospng.org/download/java/logo-java-512.png" alt="Java Logo"/>
+      <div class="img-label">Java</div>
+    </div>
+
+    <div class="img-item">
+      <img src="images/kotlinLogo.png" alt="Kotlin Logo"/>
+      <div class="img-label">Kotlin</div>
+    </div>
+
+    <div class="img-item">
+      <img src="images/cLogo.webp" alt="C Logo" />
+      <div class="img-label">C</div>
+    </div>
+
+    <div class="img-item">
+      <img src="images/gitLogo.png" alt="GitHub Logo" />
+      <div class="img-label">GitHub</div>
+    </div>
+  </div>
+</center>
+
+
+    <br><br>
+    <h2 class="center" style="color: white;">Certificates</h2>
+    <div class="cert-container">
+      <div class="cert-box">정보처리기사</div>
+      <div class="cert-box">SQLD</div>
+      <div class="cert-box">ADsP</div>
+    </div>
+
+    <br><br>
+    <h2 class="center"; style="color: white;" >Link</h2>
+      <div class="cert-container">
+        <a href="http://github.com/hyebim" target="_blank">https://github.com/hyebim</a>
+      </div>
+
+    <br><br>
+    <h2 class="center"; style="color: white;" >Contact Me</h2>
+      <div class="cert-container">
+          shb010424@gmail.com
+      </div>
+    <br><br>
+
+
+    <script src="script.js"></script>
 </body>

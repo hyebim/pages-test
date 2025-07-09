@@ -13,40 +13,62 @@ a{
     text-decoration: none; /*밑줄 제거*/
 }
 
-.menu-bar__menu-box-1 > ul > li {
-    display: inline-block;
+.menu-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black; /* 배경색 임의 설정 */
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
-.menu-bar__menu-box-1 > ul {
-    text-align: right;
+.menu-left a {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-.menu-bar__menu-box-1 > ul > li > a {
-    color: white;
-    display: block;
-    padding: 10px 30px;
+.menu-right ul {
+  font-size: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.menu-bar__menu-box-1 > ul > li:hover > a {
-    color: cadetblue; 
-    text-decoration: none;
+.menu-right li {
+  display: inline-block;
+  font-weight: bold;
 }
 
-a:link { 
+.menu-right li a {
+  color: white;
+  display: block;
+  padding: 10px 30px;
+  text-decoration: none;
+}
+
+.menu-right li:hover a {
+  color: #3abed8;
+}
+
+.menu-left li a {
+  color: white;
+  display: block;
+  padding: 10px 30px;
+  text-decoration: none;
+}
+
+a { 
     color: white; 
     text-decoration: none;
 }
-a:visited{ 
-    color: cadetblue; 
-    text-decoration: none;
-}
-a:hover { 
-    color:cadetblue; 
-    text-decoration: none;
-}
 
-.cadetblue{
-    color: darkcyan;
+a:hover { 
+    color:#3abed8; 
+    text-decoration: none;
 }
 
 .center{
@@ -57,9 +79,175 @@ a:hover {
     word-spacing: 100px;
 }
 
-.img_control{
+/* 프로필 이미지 */
+.circle-img {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 250px;
+    height: 250px;
+  }
+
+.circle-img-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+/* .img_control{
     display: inline;
+} */
+
+/*이미지*/
+.skills-title {
+  color: white;
+  text-align: center;
 }
 
+.img-control {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* 줄바꿈 허용 - 반응형 */
+  margin-top: 20px;
+}
+
+.img-item {
+  text-align: center;
+  color: white;
+}
+
+.img-item img {
+  width: 110px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.cert-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;         /* 박스 간 간격 */
+  margin-top: 20px;
+}
+
+.cert-box {
+  background-color: #2e2e2e;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+}
+
+/*프로젝트-카드*/
+.section-title {
+  text-align: center;
+  color: white;
+  margin-top: 40px; /*위쪽 여백*/
+}
+
+.project-container {
+  display: flex; /*내부 요소들 가로로 나열*/
+  flex-wrap: wrap; /*화면 너비 부족 시 자동 줄 바꿈*/
+  justify-content: center; /*모든 프로젝트 카드들을 가운데 정렬*/
+  gap: 30px; /*카드들 사이의 간격을 30px*/
+  margin-top: 20px;
+  margin-top: 20px;
+  max-width: 800px;  /* 프로젝트 2개 너비 + gap 합산 정도 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-card {
+  background-color: #000000;
+  color: white;
+  width: 350px;
+  border-radius: 12px; /*테두리를 둥글*/
+  overflow: hidden; /*카드 바깥으로 내용이 튀어나가지 않도록 자름*/
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4); /*그림자*/
+  /* text-align: center; */
+  transition: transform 0.2s ease; /*마우스 호버 시 부드럽게 변화하게 설정*/
+}
+
+.project-card:hover { 
+    /*마우스를 올리면 카드가 위로 5px 올라가는 애니메이션을 적용*/
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.project-info {
+  padding: 15px;
+}
+
+.title-with-period {
+  display: flex;
+  align-items: center;  /* 세로 정렬 맞춤 */
+  gap: 60px;             /* 제목과 기간 사이 간격 */
+  justify-content: center; /* 필요 시 가운데 정렬 */
+}
+
+.period-box {
+    background-color: #262626;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+}
+
+.lang-container {
+  display: flex;
+  gap: 10px;               /* 박스 간 간격 */
+  justify-content: center; /* 가운데 정렬 */
+  flex-wrap: nowrap;       /* 줄바꿈 없이 한 줄로 고정 */
+  overflow-x: auto;        /* 넘칠 경우 가로 스크롤 허용 (선택사항) */
+}
+
+.lang-box {
+  background-color: #262626;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+
+/* 모달 관련 */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 12px;
+  width: 400px;
+  text-align: center;
+  position: relative;
+  color: #ffffff;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
 
 
